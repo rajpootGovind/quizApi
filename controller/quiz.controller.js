@@ -2,12 +2,27 @@ const quizModel = require("../model/quiz.model")
 
 // create quiz
 exports.createQuiz = async(req, res)=>{
- try{
-    const quiz = await   quizModel.create(...req.body)
- quiz.save()
- res.status(200).send(quiz)
- }catch(error){
-    res.status.send("quiz can't create")
+    try {
+        // Extract quiz data from the request body
+        const { title, description, questions } = req.body;
+
+        // Create a new quiz document
+        const quiz = await new quizModel({
+            title:req.body.title,
+            description:req.body.description,
+            questions: req.body.questions
+           
+        });
+   
+        console.log(quiz);
+        
+
+        // Respond with the created quiz
+        res.status(201).send(quiz);
+    }
+catch(error){
+    
+    res.status(400).send("quiz can't create")
  }
 }
 
