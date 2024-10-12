@@ -1,4 +1,5 @@
 const quizModel = require("../model/quiz.model")
+const secretCode = require("../config/token.config")
 
 // create quiz
 exports.createQuiz = async(req, res)=>{

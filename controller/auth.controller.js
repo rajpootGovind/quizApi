@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs')
 const userModel= require("../model/user.model")
 const jwt = require("jsonwebtoken")
+const secretCode =require("../config/token.config")
 
 
 //logic to register user
@@ -52,7 +53,7 @@ exports.signIn = async(req, res)=>{
     }
  //using json web token we can create access token for security(we can also add time)
      //create token
-const token =jwt.sign({id:user.userId},"this is my secret quiz")
+const token =jwt.sign({id:user.userId},secretCode.code)
 
 res.status(200).send(
    {
