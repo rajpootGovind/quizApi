@@ -47,6 +47,7 @@ async function init(){
 //add route to the Server
 
 require("./routes/auth.routes")(app) //calling routes and passing obj
+require("./routes/quiz.route")(app)
 
 // Start the server
 app.listen(server.portNumber, ()=>{

@@ -5,9 +5,9 @@ const authController = require("../controller/auth.controller")
 
 
 module.exports = (app)=>{
-    app.post("/quiz/auth/signup", authController.signUp)
+    app.post("/quiz/api/auth/signup", authController.signUp)
 
-    app.post('/quiz/auth/signin',authController.signIn)
+    app.post('/quiz/api/auth/signin',authController.signIn)
 }
 
 
