@@ -2,7 +2,7 @@ const express = require("express")
 const mongoose= require("mongoose")
 const configDB = require("./config/db.config")
 const server = require("./config/server.config")
-const userModel = require("./module/user.module")
+const userModel = require("./model/user.model")
 const bcrypt = require("bcryptjs")
 
 const app = express()
@@ -26,7 +26,7 @@ db.once("open", ()=>{
 async function init(){
     let user = await userModel.findOne({userID:"admin"})
     if(user){
-        console.log("email already exist")
+        console.log("admin already exist")
         return;
     }
     try{
