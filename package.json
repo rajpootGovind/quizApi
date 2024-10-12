@@ -2,21 +2,9 @@
   "name": "quizapi",
   "version": "1.0.0",
   "description": "WE ARE GOING TO CREATE QUIZ API WITH AUTHENTICATION",
-  "main": "index.js",
-  "scripts": {
+  "main": "index.js",  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "GOVIND RAJPOOT",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "express": "^4.21.1",
-    "json": "^11.0.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.1",
-    "token": "^0.1.0",
-    "validator": "^13.12.0",
-    "validators": "^0.3.1",
-    "web": "^0.0.2"
-  }
+  "license": "ISC"
 }
